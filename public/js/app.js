@@ -10,6 +10,7 @@ let peerConnections = {};
 let isScreenSharing = false;
 let isAudioMuted = false;
 let isVideoOff = false;
+let peerConnection;
 
 
 // When creating peer connections
