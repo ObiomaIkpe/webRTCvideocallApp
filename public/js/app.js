@@ -14,28 +14,28 @@ let peerConnection;
 
 
 // When creating peer connections
-peerConnection.oniceconnectionstatechange = () => {
-  console.log(`ICE connection state: ${peerConnection.iceConnectionState}`);
+// peerConnection.oniceconnectionstatechange = () => {
+//   console.log(`ICE connection state: ${peerConnection.iceConnectionState}`);
   
-  // Log connection failures
-  if (peerConnection.iceConnectionState === 'failed') {
-    console.error('ICE connection failed');
-    // Notify the user and/or implement fallback
-  }
-};
+//   // Log connection failures
+//   if (peerConnection.iceConnectionState === 'failed') {
+//     console.error('ICE connection failed');
+//     // Notify the user and/or implement fallback
+//   }
+// };
 
-// Monitor candidate gathering
-peerConnection.onicegatheringstatechange = () => {
-  console.log(`ICE gathering state: ${peerConnection.iceGatheringState}`);
-};
+// // Monitor candidate gathering
+// peerConnection.onicegatheringstatechange = () => {
+//   console.log(`ICE gathering state: ${peerConnection.iceGatheringState}`);
+// };
 
-// Log candidate types to understand connectivity paths
-peerConnection.onicecandidate = (event) => {
-  if (event.candidate) {
-    console.log(`ICE candidate: ${event.candidate.candidate}`);
-    // Analyze candidate types (host, srflx, relay) for monitoring
-  }
-};
+// // Log candidate types to understand connectivity paths
+// peerConnection.onicecandidate = (event) => {
+//   if (event.candidate) {
+//     console.log(`ICE candidate: ${event.candidate.candidate}`);
+//     // Analyze candidate types (host, srflx, relay) for monitoring
+//   }
+// };
 
 //end here
 
